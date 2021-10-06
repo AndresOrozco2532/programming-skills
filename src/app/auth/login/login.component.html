@@ -31,7 +31,14 @@
           </div>
         </div>
 
-        <button class="btn-primary-bg btn-arrow" type="submit">Enviar</button>
+        <button
+          class="btn-primary-bg btn-arrow"
+          type="submit"
+          [ngClass]="{ spinner: isLoading }"
+          [disabled]="isLoading"
+        >
+          Enviar
+        </button>
       </form>
     </div>
   </div>

@@ -11,16 +11,19 @@ import { CONSTANTS } from '../../shared/constants/constant';
 })
 export class LoginComponent implements OnInit {
   public form: FormGroup;
+  public isLoading: boolean;
   constructor(private _authService: AuthService, private _router: Router) {}
 
   ngOnInit(): void {
+    this.isLoading = false;
     this._setForm();
   }
 
   public onSubmit() {
     if (this.form.invalid) return;
-
+    this.isLoading = true;
     this._authService.login(this.form.value).subscribe(() => {
+      this.isLoading = false;
       this._router.navigateByUrl(CONSTANTS.ROUTES.HOME);
     });
   }
