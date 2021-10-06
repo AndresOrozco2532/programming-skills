@@ -1,0 +1,23 @@
+<h5 mat-dialog-title [innerHTML]="title" *ngIf="title.length > 0"></h5>
+<div mat-dialog-content [innerHTML]="message"></div>
+<div mat-dialog-actions class="dialog-actions modal-buttons text-center">
+  <button
+    mat-button
+    (click)="onCancelClick()"
+    *ngIf="infoButton.showButtonCancel"
+    class="btn-common-bg"
+  >
+    {{ infoButton.textCancel }}
+  </button>
+  <button
+    mat-button
+    *ngIf="infoButton.showButtonOk"
+    [ngClass]="{ 'button-center center': !infoButton.showButtonCancel }"
+    cdkFocusInitial
+    (click)="onOkClick()"
+    [mat-dialog-close]="true"
+    class="btn-primary-bg"
+  >
+    {{ infoButton.textOk }}
+  </button>
+</div>
