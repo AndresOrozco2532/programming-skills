@@ -1,0 +1,275 @@
+.form-group {
+  margin: 0.5rem 0;
+  label {
+    font-family: $font-family-regular;
+    line-height: 1.5em;
+    margin-bottom: 0.5rem;
+    display: block;
+    color: $color-gray-1;
+    letter-spacing: 0.5px;
+  }
+
+  .input-info {
+    color: #515e85;
+    font-size: 0.8rem;
+    margin: 0;
+    margin-top: 0.4rem;
+    padding: 0;
+  }
+}
+
+.form-file {
+  margin: 0.5rem 0;
+  label {
+    font-family: $font-family-regular;
+    line-height: 1.5em;
+    margin: 1rem 0 1.2rem;
+    display: block;
+  }
+}
+.form-control {
+  display: block;
+  width: 100%;
+  height: calc(1.3em + 1rem);
+  padding: 0.5rem 0.75rem;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 400;
+  line-height: 1.5;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid $color-gray-5;
+  color: $color-common;
+  border-radius: 0.3rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+
+  &::-ms-expand {
+    background-color: transparent;
+    border: 0;
+  }
+}
+
+select.form-control {
+  background: url(/assets/img/icon/down-arrow-common.png) no-repeat 98% 50%;
+  background-size: 1rem;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.form-suffix {
+  display: block;
+  width: 100%;
+  height: calc(1.5em + 1rem);
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 400;
+  line-height: 1.5;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid $color-gray-5;
+  color: $color-common;
+  border-radius: 0.3rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  input {
+    border: 1px solid transparent;
+    border-right-width: 0px;
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.3rem 0 0 0.3rem;
+    margin-bottom: 0;
+    height: 100%;
+    flex: 1;
+    color: $color-common;
+
+    &:focus + .suffix {
+      // border: 1px solid $color-common;
+    }
+  }
+
+  .suffix {
+    border-left: 1px solid $color-common;
+    padding: 0 0.7rem;
+    font-size: 0.7rem;
+    font-weight: 800;
+    white-space: nowrap;
+    border-radius: 0 0.3rem 0.3rem 0;
+  }
+}
+
+textarea.form-control {
+  height: auto;
+}
+
+textarea.form-control {
+  height: auto;
+}
+
+*:not(button):focus {
+  // border-color: inherit;
+  border-color: $color-common;
+  outline: none;
+  box-shadow: none;
+
+  &::placeholder {
+    color: transparent;
+  }
+}
+
+*::placeholder {
+  color: rgba($color: #4a4a4a, $alpha: 0.4);
+  font-size: 0.8rem;
+}
+
+button:focus {
+  outline: 1px dotted;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input.input__password {
+  text-security: disc;
+  -webkit-text-security: disc;
+  -mox-text-security: disc;
+}
+
+input:disabled {
+  cursor: not-allowed;
+  opacity: 0.8;
+}
+
+$color-checkbox: $color-common;
+$color-checkbox-checked: $blue-dark;
+$size-checkbox: 24px;
+$size-checked: 12px;
+
+.checkbox {
+  display: none;
+}
+
+.checkbox + label {
+  cursor: pointer;
+  font-size: 0.85rem;
+  line-height: 1.5em;
+  padding-left: 23px;
+  position: relative;
+}
+
+.checkbox + label:before {
+  border: 2px solid $color-checkbox;
+  content: "";
+  cursor: pointer;
+  height: $size-checkbox;
+  left: 0;
+  position: absolute;
+  top: -0.2rem;
+  width: $size-checkbox;
+  border-radius: 5px;
+
+  @include from(laptop) {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+.checkbox:focus + label:before {
+  box-shadow: 0 0 2px 1px $color-common;
+}
+.checkbox + label {
+  margin-bottom: 0.5rem;
+  p {
+    padding: 0;
+  }
+}
+
+.checkbox.radio + label:before {
+  border-radius: 50%;
+}
+
+.input-error {
+  color: $color-alert;
+  font-size: 0.9rem;
+}
+
+.checkbox:disabled + label {
+  color: $color-gray-3;
+  cursor: not-allowed;
+  &:before {
+    cursor: not-allowed;
+    border: 1px solid $color-gray-3;
+  }
+}
+
+.checkbox:checked + label:before {
+  // border-color: $color-checkbox-checked;
+}
+.checkbox:checked + label:after {
+  content: "";
+  background: $color-checkbox-checked;
+  border-radius: 50%;
+  position: absolute;
+  top: 2px;
+  left: 5px;
+  width: $size-checked;
+  height: $size-checked;
+
+  @include from(laptop) {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+.checkbox.white + label,
+.checkbox.white + label > a {
+  color: white;
+}
+
+.checkbox.white + label:before {
+  border-color: white;
+}
+
+.checkbox.white:checked + label:after {
+  background-color: white;
+}
+
+.checkbox + label.error::before {
+  border-color: $color-alert;
+}
+
+.text-error {
+  color: $color-alert;
+  font-family: $font-family-medium;
+}
+
+/**
+* FORM ERRORS 
+**/
+form.submited .form-control.ng-invalid,
+form.submited .ng-invalid[formcontrolname]:not(.form) > .form-control,
+form.submited
+  .ng-invalid[formcontrolname]:not(.form)
+  .select-group
+  > .form-control,
+form.submited
+  .ng-invalid[formcontrolname]:not(.form)
+  .form-group
+  > .form-control,
+form.submited .form-suffix input.ng-invalid {
+  color: $color-alert;
+  border: 1px solid $color-alert;
+}
+form.submited .checkbox.ng-invalid + label::before {
+  border-color: $color-alert;
+}
+
+@media (max-width: 990px) {
+  .form-control {
+    height: calc(1.8em + 1rem);
+  }
+}

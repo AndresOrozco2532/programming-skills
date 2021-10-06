@@ -1,0 +1,24 @@
+@mixin translate-steps($width-step: 33rem) {
+    $first-step: 0;
+    $second-step: -1 * $width-step;
+    $third-step: -2 * $width-step;
+    $fourth-step: -3 * $width-step;
+    $fifth-step: -4 * $width-step;
+    
+    &.step1 {
+      transform: translateX($first-step);
+    }
+    &.step2 {
+      transform: translateX($second-step);
+    }
+    &.step3 {
+      transform: translateX($third-step);
+    }
+    &.step4 {
+      transform: translateX($fourth-step);
+    }
+    &.step5 {
+      transform: translateX($fifth-step);
+    }
+  }
+  

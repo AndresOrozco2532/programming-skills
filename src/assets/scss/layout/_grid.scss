@@ -1,0 +1,110 @@
+.grid {
+  display: grid;
+}
+
+.grid-columns {
+  @extend .grid;
+  grid-auto-flow: column;
+}
+
+.grid-content-top {
+  align-content: start;
+}
+
+.grid-content-middle {
+  align-content: center;
+}
+
+.grid-content-bottom {
+  align-content: end;
+}
+
+.grid-content-left {
+  justify-content: start;
+}
+
+.grid-content-center {
+  justify-content: center;
+}
+
+.grid-content-right {
+  justify-content: end;
+}
+
+.grid-items-top {
+  align-items: start;
+}
+
+.grid-items-middle {
+  align-items: center;
+}
+
+.grid-items-bottom {
+  align-items: end;
+}
+
+.grid-items-left {
+  justify-items: start;
+}
+
+.grid-items-center {
+  justify-items: center;
+}
+
+.grid-items-right {
+  justify-items: end;
+}
+
+.grid-self-top {
+  align-self: start;
+}
+
+.grid-self-middle {
+  align-self: center;
+}
+
+.grid-self-bottom {
+  align-self: end;
+}
+
+.grid-self-left {
+  justify-self: start;
+}
+
+.grid-self-center {
+  justify-self: center;
+}
+
+.grid-self-right {
+  justify-self: end;
+}
+
+.grid-gap-10 {
+  @extend .grid;
+  grid-gap: $gutter-10;
+}
+
+.grid-gap-16 {
+  @extend .grid;
+  grid-gap: $gutter-16;
+}
+
+.grid-gap-20 {
+  @extend .grid;
+  grid-gap: $gutter-20;
+}
+
+.grid-gap-40 {
+  @extend .grid;
+  grid-gap: $gutter-40;
+}
+
+.grid-column-1fr {
+  @extend .grid-columns;
+  grid-auto-columns: 1fr;
+}
+
+.grid-row-1fr {
+  @extend .grid;
+  grid-auto-rows: 1fr;
+}

@@ -1,0 +1,16 @@
+$max-content: 1040px;
+
+$gutter-10: 0.625rem;
+$gutter-16: 1rem;
+$gutter-20: 1.25rem;
+$gutter-40: 2.5rem;
+$gutter-80: 5rem;
+
+$padding: 1rem;
+$margin: 1rem;
+$border-radius: 1.5625rem;
+
+$z-index: (
+  modal: 1000,
+  notification: 2000,
+);

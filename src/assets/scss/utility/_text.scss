@@ -1,0 +1,81 @@
+.no-wrap {
+  white-space: nowrap;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-color-error {
+  color: $color-alert !important;
+}
+
+.text-color-common {
+  color: $color-common !important;
+}
+
+.text-color-white {
+  color: #fff !important;
+}
+.text-color-primary {
+  color: $color-primary !important;
+}
+
+.text-color-secondary {
+  color: $color-secondary !important;
+}
+
+.text-color-tertiary {
+  color: $color-tertiary !important;
+}
+
+.text-color-partner {
+  color: $color-partner !important;
+}
+
+.text-with-decoration {
+  position: relative;
+  background-image: url(/assets/img/resources/text-bg-decoration.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  &::before {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: 0;
+  }
+}
+.text-decoration-secondary {
+  position: relative;
+  width: fit-content;
+
+  &::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: calc(100% + 4rem);
+    top: 0;
+    left: -1rem;
+    z-index: -1;
+    background-image: url(/assets/img/resources/text-second-bg-decoration.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom;
+  }
+}
+
+.highlighted-text {
+  background-color: $color-primary;
+  color: $white;
+  font-weight: bold;
+  padding: 0 3px;
+}
+
+.underlined-link {
+  text-decoration: underline;
+}

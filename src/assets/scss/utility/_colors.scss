@@ -1,0 +1,18 @@
+@each $color_name, $color_value in $colors {
+  @if map-has-key($color_value, text-class) {
+    @if (map_get($color_value, text-class)) {
+      .#{$color_name}-text {
+        color: map_get($color_value, color);
+      }
+    }
+  } @else {
+    .#{$color_name}-text {
+      color: map_get($color_value, color);
+    }
+  }
+
+  .#{$color_name} {
+    background:  map_get($color_value, color);
+    color: map_get($color_value, contrast);
+  }
+}

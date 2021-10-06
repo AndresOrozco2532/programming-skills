@@ -1,0 +1,59 @@
+// .mat-modal {
+//   padding: 1.5rem 1rem 2.5rem 2rem;
+// }
+
+.mat-dialog-title {
+  font-family: $font-family-medium !important;
+  text-align: center;
+  margin: 0 0 5px !important;
+}
+
+.modal-body {
+  &__message {
+    font-family: $font-family-medium;
+    color: $color-gray-2;
+    text-align: center;
+    padding: 1rem 0;
+  }
+}
+.modal-buttons {
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch !important;
+  margin: 0 auto;
+
+  button {
+    flex: 0 calc(50% - 0.5rem);
+    max-height: 3.5rem;
+  }
+  @include to(tablet-l) {
+    flex-direction: column;
+    button {
+      flex: 1;
+      margin-top: 1.5rem;
+    }
+  }
+}
+
+.div-close-button {
+  justify-content: flex-end;
+}
+.close-button {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  outline: none;
+  img {
+    width: 1.3rem;
+  }
+}
+
+.close-icon {
+  background: url("/assets/img/icon/times-black.png");
+  background-size: cover;
+  @include size(22px, 22px);
+  position: absolute;
+  right: 1vh;
+  top: 1vh;
+}

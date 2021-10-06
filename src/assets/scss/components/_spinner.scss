@@ -1,0 +1,33 @@
+.spinner {
+  position: relative;
+  padding-right: 2rem;
+  padding-left: 1.5rem;
+
+  &:before {
+    content: "";
+    box-sizing: border-box;
+    position: absolute;
+    top: 0.8rem;
+    right: 1rem;
+    border-radius: 50%;
+    border: 2px solid #ffffff;
+    border-right: 2px solid transparent;
+    width: 1.5rem;
+    height: 1.5rem;
+    background: none;
+  }
+  &:before {
+    animation: kt-spinner 0.5s linear infinite;
+  }
+}
+button.spinner {
+  & > img {
+    display: none;
+  }
+}
+
+@keyframes kt-spinner {
+  to {
+    transform: rotate(360deg);
+  }
+}

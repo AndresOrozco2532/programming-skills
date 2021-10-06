@@ -1,0 +1,145 @@
+/* ****************************************************
+ * MO Colors
+ * ****************************************************/
+
+$green: #2ec973;
+$yellow: #ffa300;
+$blue-dark: #283552;
+$blue: #365e80;
+$blue-light: #1dc1c1;
+$white: white;
+
+/* ****************************************************
+ * Principal colors, usually for theme the app
+ * ****************************************************/
+
+// Color for general text, paragraphs, etc.
+$color-common: #0b0e16;
+$color-common-contrast: white;
+
+// Color primary, usually for navs, headers, buttons
+$color-primary: #ff4759;
+$color-primary-contrast: #fff;
+
+// Color secondary, usually to contrast or join with primary color
+$color-secondary: #07376a;
+$color-secondary-contrast: #fff;
+
+// Color tertiary, usually to emphasis some buttons or actions
+$color-tertiary: #2a3441;
+$color-tertiary-contrast: white;
+
+// Color quaternary
+$color-quaternary: #00bfbf;
+$color-quaternary-contrast: white;
+
+//Color to phase 2, Color to use in loan
+$color-text: #272a3d;
+$color-text-contrast: white;
+
+// Color partner, usually to emphasis some text or button relative partner
+$color-partner: #0052ba;
+$color-tertiary-contrast: white;
+
+$color-blue-partner: #0753b3;
+$color-blue-partner-contrast: white;
+
+$color-text-request: #2e384d;
+$color-text-request-contrast: white;
+
+/* ****************************************************
+ * State colors, usually to represent status, or actions
+ * ****************************************************/
+
+$color-active: #00d182;
+$color-active-contrast: white;
+
+$color-warning: #ffa300;
+$color-warning-contrast: white;
+
+$color-info: #1d9ac1;
+$color-info-contrast: white;
+
+$color-alert: #f95f62;
+$color-alert-contrast: white;
+
+$color-default: #e5e5e5;
+$color-default-contrast: #283552;
+
+$color-disabled: #e5e5e5;
+$color-disabled-contrast: white;
+
+/* ****************************************************
+ * Gray tones to use in shadows, borders, lines, etc
+ * ****************************************************/
+
+$color-gray-1: #252525;
+
+$color-gray-2: #4a4a4a;
+
+$color-gray-3: #8b8b8b;
+
+$color-gray-4: #a2a2a2;
+
+$color-gray-5: #e2e2e2;
+
+$color-gray-6: #f8f8f8;
+
+$color-gray-7: #f6f6f6;
+
+$color-gray-8: #f7f7f7;
+
+$colors: (
+  primary: (
+    color: $color-primary,
+    contrast: $color-primary-contrast,
+  ),
+  primary-gradient: (
+    color:
+      linear-gradient(
+        -8deg,
+        $color-primary 50%,
+        darken($color-secondary, 25) 50%
+      ),
+    contrast: $color-primary-contrast,
+    text-class: false,
+  ),
+  secondary: (
+    color: $color-secondary,
+    contrast: $color-secondary-contrast,
+  ),
+  tertiary: (
+    color: $color-tertiary,
+    contrast: $color-tertiary-contrast,
+  ),
+  active: (
+    color: $color-active,
+    contrast: $color-active-contrast,
+  ),
+  warning: (
+    color: $color-warning,
+    contrast: $color-warning-contrast,
+  ),
+  info: (
+    color: $color-info,
+    contrast: $color-info-contrast,
+  ),
+  alert: (
+    color: $color-alert,
+    contrast: $color-alert-contrast,
+  ),
+  default: (
+    color: $color-default,
+    contrast: $color-default-contrast,
+  ),
+  disabled: (
+    color: $color-disabled,
+    contrast: $color-disabled-contrast,
+    text-class: false,
+  ),
+  common: (
+    color: $color-common,
+    contrast: $color-common-contrast,
+    text-class: false,
+  ),
+);

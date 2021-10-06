@@ -1,0 +1,17 @@
+
+.flex-h {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.flex-v {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.middle {
+  flex: 0 50%;
+}

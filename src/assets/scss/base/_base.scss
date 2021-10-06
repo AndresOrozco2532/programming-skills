@@ -1,0 +1,118 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  font-weight: 400;
+}
+
+html,
+body {
+  // min-height: 100vh;
+  overflow-x: hidden;
+}
+
+body {
+  color: $color-common;
+  font-family: $font-family-regular;
+  line-height: $line-height;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  line-height: $line-height;
+
+  @media (max-width: map-get($map: $breakpoints, $key: mobile-l)) {
+    line-height: $line-height-mobile;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font-family-title;
+}
+
+h1 {
+  font-size: $h1-font-size;
+  font-family: $font-family-blackitalic;
+}
+
+h2 {
+  font-size: $h2-font-size;
+}
+
+h3 {
+  font-size: $h3-font-size;
+}
+
+h4 {
+  font-size: $h4-font-size;
+}
+
+h5 {
+  font-size: $h5-font-size;
+}
+
+h6 {
+  font-size: $h6-font-size;
+}
+small {
+  font-size: $small-font-size;
+}
+
+p,
+a {
+  font-size: $p-font-size;
+  font-family: $font-family-regular;
+}
+label {
+  font-size: $label-font-size;
+}
+
+p,
+a {
+  padding: $padding / 2 0 $padding;
+}
+
+b {
+  font-family: $font-family-bold;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  background: $color-default;
+  color: $color-default-contrast;
+  border: 1px solid;
+  cursor: pointer;
+  font-family: $font-family-bold;
+  font-size: $small-font-size;
+  transition: all 0.3s ease;
+  outline: 0;
+
+  &:active {
+    transform: scale(0.96);
+  }
+}
+
+img {
+  max-width: 100%;
+}

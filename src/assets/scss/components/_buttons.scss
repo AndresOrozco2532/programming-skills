@@ -1,0 +1,199 @@
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.btn {
+  align-items: center;
+  border: none;
+  border-radius: 0.3rem;
+  display: flex;
+  flex-direction: row;
+  font-size: 0.9rem;
+  font-family: $font-family-bold;
+  font-weight: 100;
+  justify-content: center;
+  letter-spacing: 0;
+  min-width: 6rem;
+  padding: 0.9rem 1rem;
+  text-align: center;
+  text-decoration: none;
+
+  @include to(tablet-l) {
+    width: 100%;
+  }
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  > img {
+    width: 1.3rem;
+  }
+
+  &-primary {
+    @extend .btn;
+    background: $color-primary-contrast;
+    border: 1px solid $color-primary-contrast;
+    color: $color-primary;
+  }
+
+  &-primary-border {
+    @extend .btn;
+    border: 3px solid $color-primary;
+    color: $color-primary;
+    background: $color-primary-contrast;
+  }
+
+  &-primary-bg {
+    @extend .btn;
+    background: $color-primary;
+    color: $color-primary-contrast;
+    border: 2px solid $color-primary;
+  }
+
+  &-secondary {
+    @extend .btn;
+    background: #fff;
+    border: 1px solid $color-secondary;
+    color: $color-secondary;
+  }
+
+  &-secondary-border {
+    @extend .btn;
+    border: 3px solid $color-secondary;
+    font-family: $font-family-regular;
+    color: $color-secondary;
+    background: $color-secondary-contrast;
+  }
+
+  &-secondary-bg {
+    @extend .btn;
+    background-color: $color-secondary;
+    color: $color-secondary-contrast;
+    border: 2px solid $color-secondary;
+
+    &:hover {
+      color: white;
+    }
+  }
+
+  &-common-bg {
+    @extend .btn;
+    background-color: $color-common;
+    border: 2px solid $color-common;
+    color: $color-common-contrast;
+  }
+  &-tertiary-bg {
+    @extend .btn;
+    background-color: $color-tertiary;
+    color: $color-tertiary-contrast;
+  }
+  &-tertiary-border {
+    @extend .btn;
+    border: 2px solid $color-tertiary;
+    color: $color-tertiary;
+    background: $color-secondary-contrast;
+  }
+
+  &-quaternary {
+    @extend .btn;
+    background: #fff;
+    border: 1px solid $color-quaternary;
+    color: $color-quaternary;
+  }
+
+  &-quaternary-border {
+    @extend .btn;
+    border: 3px solid $color-quaternary;
+    font-family: $font-family-regular;
+    color: $color-quaternary;
+    background: $color-quaternary-contrast;
+  }
+
+  &-quaternary-bg {
+    @extend .btn;
+    background-color: $color-quaternary;
+    color: $color-quaternary-contrast;
+    border: 2px solid $color-quaternary;
+
+    &:hover {
+      color: white;
+    }
+  }
+
+  &-white-border {
+    @extend .btn;
+    box-shadow: none;
+    border: 1px solid white;
+    border-radius: 1px;
+    color: white;
+    background: transparent;
+  }
+
+  &-transparent {
+    background-color: transparent;
+    border-color: transparent;
+  }
+  &-bg {
+    @extend .btn;
+    background: $color-common-contrast;
+    box-shadow: -20px -20px 50px 0 rgba(165, 164, 164, 0.5),
+      -1px 3px 4px 0 #cfdbe7, inset 2px 1px 3px 0 #ffffff,
+      inset 4px 4px 23px 0 rgba(255, 255, 255, 0.26);
+    color: #173a56;
+    font-family: $font-family-semibold;
+  }
+
+  &-gray-bg {
+    @extend .btn;
+    color: #fff;
+    background-color: $color-gray-2;
+    border: 2px solid $color-gray-2;
+  }
+
+  &-gray-border {
+    @extend .btn;
+    border: 2px solid $color-gray-2;
+    color: $color-gray-2;
+    background: #fff;
+  }
+
+  &-arrow {
+    @extend .btn;
+    justify-content: space-between;
+    background-image: url("../../img/icon/arrow-right.png");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    border: none;
+    cursor: pointer;
+    vertical-align: middle;
+    padding: 1rem;
+  }
+}
+
+.btn-large {
+  min-width: 15rem;
+  justify-content: center;
+  // @include to(tablet-l) {
+  //   min-width: 13rem;
+  // }
+}
+
+.btn-green-bg {
+  @extend .btn;
+  background-color: $blue-light;
+  color: white;
+  border-radius: 1px;
+  box-shadow: none;
+}
+
+.btn-delete {
+  background-color: transparent;
+  background-image: url(/assets/img/icon/circle-delete.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 1.8rem;
+  height: 1.8rem;
+  border: 0;
+}

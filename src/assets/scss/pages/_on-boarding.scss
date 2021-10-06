@@ -1,0 +1,97 @@
+@import "../../../../assets/scss/variables/breakpoints";
+@import "../../../../assets/scss/mixins/breakpoints";
+
+$widh-mobile: 100%;
+@mixin select-group-mobile {
+  margin: 0;
+  padding: 0.6rem 0;
+
+  &:after {
+    bottom: 2.5rem;
+  }
+}
+// $widh-mobile: calc(100vw - 4rem);
+
+.forms {
+  background: #ffffff;
+  position: relative;
+  padding: 2rem 3rem 3rem;
+  min-height: 70vh;
+  align-items: center;
+
+  .title {
+    margin-bottom: 2rem;
+  }
+}
+
+form.flex-v,
+.form-page {
+  justify-content: space-between;
+  min-height: 90vh;
+  @supports (-webkit-touch-callout: none) {
+    min-height: 80vh;
+  }
+  // --safe-area-inset-bottom: env(safe-area-inset-bottom);
+  // height - navbar - bottom
+  //height: calc(100vh - 4.1rem - var(--safe-area-inset-bottom)) !important;
+}
+.controls {
+  @include to(tablet-l) {
+    overflow-y: scroll;
+    padding: 0 5vw 1rem !important;
+    height: auto;
+  }
+}
+.group {
+  flex-wrap: wrap;
+  padding: 0;
+  align-items: flex-end;
+  align-content: flex-start;
+  h4 {
+    flex: 0 100%;
+  }
+  .form-group,
+  .days-info {
+    margin-right: 0.8rem;
+    max-width: calc(50% - 1rem);
+    flex: 0 calc(50% - 1rem);
+    .form-group {
+      margin-right: 0;
+      max-width: none;
+      flex: 1;
+      padding-bottom: 2px;
+    }
+  }
+
+  @include to(tablet-l) {
+    display: block;
+    overflow-y: scroll;
+    h4 {
+      margin-top: 1.5rem;
+      width: $widh-mobile;
+    }
+
+    .form-group {
+      margin: 0;
+      max-width: none;
+      width: $widh-mobile;
+      padding: 0.5rem 0;
+    }
+    .select-group {
+      @include select-group-mobile;
+    }
+    .days-info {
+      margin: 0;
+      padding: 0;
+      max-width: none;
+      width: $widh-mobile;
+      .select-group {
+        @include select-group-mobile;
+      }
+    }
+
+    ::ng-deep .select-group {
+      @include select-group-mobile;
+    }
+  }
+}
