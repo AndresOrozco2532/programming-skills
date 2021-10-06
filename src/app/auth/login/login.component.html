@@ -1,7 +1,14 @@
 <div class="login">
   <div class="login__left">
     <div class="form">
-      <form [formGroup]="form" (ngSubmit)="onSubmit()" class="form">
+      <h3 class="title">Login</h3>
+      <p class="description">Please enter your credentials to proceed.</p>
+      <form
+        [formGroup]="form"
+        [appFormValidate]="form"
+        (ngSubmit)="onSubmit()"
+        class="form"
+      >
         <div class="form-group">
           <label for="txtEmail">Email</label>
           <input
