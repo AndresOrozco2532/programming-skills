@@ -1,1 +1,13 @@
-<p>home works!</p>
+<div class="home">
+  <ng-container *ngIf="user">
+    <home-header [user]="user"></home-header>
+    <div class="home__content">
+      <ng-container *ngIf="userList && userList.length > 0">
+        <home-user-item
+          *ngFor="let user of userList"
+          [user]="user"
+        ></home-user-item>
+      </ng-container>
+    </div>
+  </ng-container>
+</div>

@@ -1,0 +1,30 @@
+@import "../../../../assets/scss/variables/colors";
+@import "../../../../assets/scss/variables/font";
+
+.user-item {
+  margin: 1rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $white;
+  padding: 1rem;
+
+  &__name {
+    p {
+      padding: 0;
+    }
+    .initials {
+      background-color: $color-quaternary;
+      padding: 10px;
+      border-radius: 30px;
+      color: $white;
+      width: 40px;
+      height: 40px;
+      text-align: center;
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 1rem;
+      font-family: $font-family-medium;
+    }
+  }
+}

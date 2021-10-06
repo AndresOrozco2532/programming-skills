@@ -1,0 +1,49 @@
+@import "../../../../assets/scss/variables/colors";
+@import "../../../../assets/scss/variables/font";
+
+.header {
+  background-color: $white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 2rem;
+  position: relative;
+  &__logo {
+    width: 1rem;
+    margin: auto 2rem;
+  }
+  &__user-card {
+    background-color: $color-gray-4;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+
+    .user-icon {
+      margin-right: 0.5rem;
+    }
+    .arrow-icon {
+      margin-left: 0.5rem;
+    }
+    .user-name {
+      color: $white;
+      font-family: $font-family-medium;
+      padding: 0;
+    }
+  }
+  &__menu {
+    position: absolute;
+    right: 0;
+    top: 60px;
+    background-color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 11px;
+    box-shadow: 0 15px 25px 5px rgba(0, 0, 0, 0.06);
+    cursor: pointer;
+
+    p {
+      padding: 0;
+    }
+  }
+}

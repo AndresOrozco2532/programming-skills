@@ -1,16 +1,4 @@
-import { environment } from 'src/environments/environment';
-
 export const CONSTANTS = {
-  PROP_URL_TOKEN: 'token',
-  PROP_URL_UBER_CODE: 'code',
-  PROP_STORAGE_ONBOARDING_STEPS: 'prop.keo.on-boarding-data-steps',
-  PROP_STORAGE_VISITOR: 'prop.keo.visitor',
-  PROP_HOUR_TOKEN: 'prop.keo.on-boarding-hour-token',
-  PROP_STORAGE_UBER_CODE: 'prop.keo.code',
-  PROP_STORAGE_TOKEN: 'prop.keo.on-boarding-token',
-  PROP_STORAGE_FIRST_LOGGED: 'prop.app-first-logged',
-  SIZE_MOBILE_SCREEN: 990,
-
   COUNTRY_SETUP: {
     SIGN_CURRENCY: '$',
     THOUSAND_SEPARATOR: /\./g,

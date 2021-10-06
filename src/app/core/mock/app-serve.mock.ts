@@ -6,8 +6,14 @@ import {
 } from '@angular/common/http';
 
 import { environment } from 'src/environments/environment';
+import UserData from './user.mock.json';
+import UserList from './user-list.mock.json';
 
-const ROUTES_MOCK = [{ url: '\\/login\\/', data: {} }];
+const ROUTES_MOCK = [
+  { url: '\\/login\\/', data: {} },
+  { url: '\\/user-info\\/', data: UserData },
+  { url: '\\/users-list\\/', data: UserList },
+];
 
 export class ServerMock {
   public request(req: any): Observable<HttpEvent<any>> {
