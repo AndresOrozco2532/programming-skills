@@ -1,0 +1,26 @@
+[
+  {
+    "username": "Andres Orozco",
+    "fullname": "Diego Andres Orozco Lopez",
+    "role": "Admin",
+    "password": "12345@",
+    "re_password": "12345@",
+    "initial": "AO"
+  },
+  {
+    "username": "Pepe",
+    "fullname": "Pepe Lopez",
+    "role": "user",
+    "password": "12345@asda",
+    "re_password": "12345@asda",
+    "initial": "PL"
+  },
+  {
+    "username": "Avi",
+    "fullname": "Avi Amaya",
+    "role": "user",
+    "password": "12345@asd",
+    "re_password": "12345@asd",
+    "initial": "AA"
+  }
+]

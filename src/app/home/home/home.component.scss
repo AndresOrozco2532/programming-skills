@@ -1,0 +1,9 @@
+@import "../../../assets/scss/variables/colors";
+
+.home {
+  background-color: $color-gray-6;
+  height: 100%;
+  &__content {
+    margin: 2rem;
+  }
+}
